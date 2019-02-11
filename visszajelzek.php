@@ -17,17 +17,17 @@
                     <h2>Jelezd, ha jössz!</h2><br>
                     <label>Név:</label><br>
                     <input class="beviteli" type="text" name="nev" value="<?php
-        if (isset($_POST['nev'])) {
-            print $_POST['nev'];
-        }
-        ?>"><br>
+                    if (isset($_POST['nev'])) {
+                        print $_POST['nev'];
+                    }
+                    ?>"><br>
 
                     <label>Email:</label><br>
                     <input class="beviteli" type="emali" name="mail" value="<?php
-                           if (isset($_POST['mail'])) {
-                               print $_POST['mail'];
-                           }
-                           ?>"><br>
+                    if (isset($_POST['mail'])) {
+                        print $_POST['mail'];
+                    }
+                    ?>"><br>
 
                     <labbel>Fő:</labbel><br>
                     <select style="width: 40px;" name="vendeg">
@@ -54,18 +54,17 @@
                     </select><br>
                     <label>Megjegyzés:</label><br>
                     <textarea rows="4" cols="30" name="hozzaszolas" placeholder="Valami:">
-<?php
-if (isset($_POST['hozzaszolas'])) {
-    print $_POST['hozzaszolas'];
-}
-?>
+                        <?php
+                        if (isset($_POST['hozzaszolas'])) {
+                            print $_POST['hozzaszolas'];
+                        }
+                        ?>
                     </textarea><br>
                     <input class="belepes" type="submit" value="Küldés">
                 </form> 
             </div> 
         </div>
         <?php
-        
         if ((isset($_POST['nev'])) && (isset($_POST['mail'])) && (isset($_POST['vendeg'])) && (isset($_POST['hozzaszolas']))) {
 
             $nev = trim($_POST['nev']);
@@ -90,8 +89,24 @@ if (isset($_POST['hozzaszolas'])) {
                 print '<div style="color: red">A hozzászólás legalább 10 és maximum 100 karakter lehet!</div>';
                 $hiba = true;
             }
+            if ($hiba) {
 
+                $message = "Új üzenet érkezett a gaboresku.hu weboldalról.\n\n";
+                $message .= "Név: $nev\n";
+                $message .= "Név: $mail\n";
+                $message .= "Név: $vendeg\n";
+                $message .= "Email: $hozzaszolas\n";
+//feladó      
+                $header = "From: gaboresku.hu  <info@gaboroesku.hu>";
+                $subject = "Új üzenet agaboresku.hu-ról ($nev)";
+                $to = "gaboroka2019@gmail.com";
+
+                mail($to, $subject, $message, $header);
+             print 'Üzenet elküldve.';
+            }
         }
+        ?>
+        <?php
         ?>
 
         <div id="textContainer">
@@ -105,6 +120,6 @@ if (isset($_POST['hozzaszolas'])) {
             </p>               
         </div>       
 
-        <?php include 'includes/footer.php'; ?>
+<?php include 'includes/footer.php'; ?>
 
 

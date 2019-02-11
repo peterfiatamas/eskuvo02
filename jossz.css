@@ -73,6 +73,7 @@ a:hover{
     border-radius: 5px;
     background-color: orange;
     color: white;
+    box-shadow: 4px 4px 2px gray;
 }
 .belepes:hover{
     background-color: #ffcc66;
