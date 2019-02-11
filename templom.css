@@ -21,53 +21,65 @@ body{
     width: 40%;
     display: block;
     float: left;
-    font-size: 20px;
+    font-size: 25px;
     color: gray;
+    background-color: yellowgreen;
 }
 .menuContainer{
     width: 60%;
     display: block;
     float: left;
-
+    background: rgba(225, 225, 225, 0.3);
 }
 a{
     text-decoration: none;
     color: gray;
     padding: 4px;
-    font-size: 20px;
+    font-size: 25px;
 }
 a:hover{
     text-decoration: underline;
 
 }
-
-#BelepContainer{
-    width: 50%;
-    float: left;
+.cim_container{
+    padding-top: 5%;
 }
-.belepes{
-    margin-top: 5px;
+.cim_container{
+    text-align: center;
+}
+h1{
+    color: gray;
+}
+p{
+    color: gray;
+    font-size: 20px;
+    padding: 2px;
+}
+.terkep_container{
     padding: 5px;
-    border-radius: 5px;
-    background-color: orange;
-    color: white;
+    height: 500px;
+    text-align: center;  
+    background-color: pink;
 }
-.belepes:hover{
+.terkep{
+    width: 100%;
+    height: 100%;
+}
+.idopont{  
+    text-align: center;
+}
+.ugras{
+    color: white;
+    background-color: orange;
+    box-shadow: 4px 4px grey;
+    margin: 5px;
+    margin-left: 5%;
+    margin-top: 100px;
+    border-radius: 5px;
+}
+.ugras:hover{
     background-color: #ffcc66;
 }
-
-.urlap{
-    width: 60%;
-    margin: 0 auto 0 auto;
-    text-align: center;
-    margin-top: 10%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    color: gray;
-    background: rgba(225, 225, 225, 0.3);
-}
-
-
 
 @media only screen and (max-width: 800px) {
 
@@ -87,11 +99,7 @@ a:hover{
         padding: 5px;
         margin-top: 5px;
     }
-
-    #BelepContainer{
-        width: 100%;
-        float: left;
+    .ugras_container{
+        text-align: center;
     }
-      
-    
 }

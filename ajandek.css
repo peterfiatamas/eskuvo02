@@ -29,7 +29,7 @@ body{
     width: 60%;
     display: block;
     float: left;
-    background: rgba(225, 225, 225, 0.3)
+    background: rgba(225, 225, 225, 0.3);
 }
 a{
     text-decoration: none;
@@ -42,14 +42,32 @@ a:hover{
 
 }
 
-.BoroGabor{
-    display: block;
-    position: absolute;
-    top: 70%;
-    left: -10%;
-    font-size: 20px;
-    color: black;
+.cimTok{
+    padding-top: 5%;
+    text-align: center;
+    color: gray;
 }
+.kepTok{
+    text-align: center;
+}
+.sutikep{
+    width: 40%;
+    height: auto;
+}
+.szovegTok{
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(225,225,225,0.3);
+}
+
+.szoveg{
+    font-size: 22px;
+    width: 40%;
+    padding-left: 30%;
+    text-align: justify;
+}
+
+
 @media only screen and (max-width: 800px) {
 
     .cim{
@@ -68,11 +86,12 @@ a:hover{
         padding: 5px;
         margin-top: 5px;
     }
-
-    .BoroGabor{
-        left: 5px;
-        font-size: 2px;
-        color: gold;
-        text-shadow: 2px 2px black;
+    .sutikep{
+        width:70%;
+        height: auto;
+    }
+    .szoveg{
+        width: 100%;
+        padding-left: 0;
     }
 }

@@ -4,11 +4,10 @@
         <div class="menuContainer">
             <nav>
                 <a href="index.php">Főoldal</a>
-                <a href="">Mikor és hol?</a>                
-                <a href="jossz.php">Jösz?</a>   
-                <a href="">Ajándék</a>   
-                <a href="">Kik</a>     
-                <a href="belepes.php">Belépés</a>     
+                <a href="templom.php">Templom</a>                
+                <a href="lagzi.php">Lagzi</a>                
+                <a href="visszajelzek.php">Visszajelzek</a>   
+                <a href="ajandek.php">Ajándék</a>          
             </nav>
         </div>
     </div>
