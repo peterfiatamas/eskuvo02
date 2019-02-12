@@ -4,8 +4,8 @@ $(document).ready(function () {
         $(".BoroGabor").animate({
             width: "50%",
             opacity: 0.8,
-            marginLeft: "50%",
-            fontSize: "180%"
+            marginLeft: "55%",
+            fontSize: "160%"
         }, 2500);
     } else {
         $(".BoroGabor").animate({
@@ -13,7 +13,7 @@ $(document).ready(function () {
             opacity: 0.8,
             marginLeft: "10%",
             marginTop: "20%",
-            fontSize: "120%"
+            fontSize: "140%"
         }, 2500);
     }
 

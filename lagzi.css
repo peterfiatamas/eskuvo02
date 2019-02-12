@@ -14,9 +14,7 @@ body{
 #mainContainer{
     text-align: center;
 }
-#header{
-    margin-top: 5px;
-}
+
 .cim{
     width: 40%;
     display: block;
@@ -30,11 +28,11 @@ body{
     display: block;
     font-size: 20px;
     float: left;
-    background: rgba(225, 225, 225, 0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 a{
     text-decoration: none;
-    color: gray;
+    color: white;
     padding: 4px;
     font-size: 25px;
 }
@@ -95,19 +93,19 @@ p{
     padding-left: 10px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
 
     .cim{
         width: 100%;
         display: block;
-        float: none;
+        float: left;
         background-color: yellowgreen;
     }
     .menuContainer{
         width: 100%;
-        display: inline;
-        float: none;
-        background-color: pink
+        display: block;
+        float: left;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     a{
         padding: 5px;

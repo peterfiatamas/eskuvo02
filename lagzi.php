@@ -4,6 +4,14 @@
         <link type="text/css" href="lagzi.css" rel="stylesheet" />   
         <meta charset="UTF-8">
         <title></title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script type="text/javascript">
+        $(window).ready(function(){
+            $('#lagzi').css('text-decoration', 'underline');
+            
+        });
+        
+        </script>
     </head>
     <body>
         <?php include 'includes/menu.php'; ?>       

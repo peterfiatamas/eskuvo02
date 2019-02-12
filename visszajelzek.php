@@ -1,15 +1,66 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link type="text/css" href="jossz.css" rel="stylesheet" />       
+        <link type="text/css" href="visszajelzek.css" rel="stylesheet" />       
         <meta charset="UTF-8">
         <title></title>        
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="visszajelzes.js"></script>
+        <script type="text/javascript">
+            $(window).ready(function () {
+                $('#visszajel').css('text-decoration', 'underline');
+
+            });
+
+        </script>
     </head>
     <body>
         <?php include 'includes/menu.php'; ?>
         <?php
+        ?>
+        <?php
+        if ((isset($_POST['nev'])) && (isset($_POST['mail'])) && (isset($_POST['vendeg'])) && (isset($_POST['hozzaszolas']))) {
+
+            $nev = trim($_POST['nev']);
+            $mail = trim($_POST['mail']);
+            $vendeg = trim($_POST['vendeg']);
+            $hozzaszolas = trim($_POST['hozzaszolas']);
+            $hiba = false;
+            if (preg_match("/^[a-zöüóőúűáé\s.]{5,50}$/i", $nev) == 0) {
+                print '<div class="hibauzi" style="color: red">Add meg a neved!</div>';
+                $hiba = true;
+            }
+
+
+            if (preg_match("/^[0-9a-z\.-]+@([0-9a-z-]+\.)+[a-z]{2,4}$/", $mail) == 0) {
+                print '<div class="hibauzi" style="color: red">Érvénytelen email cím!</div>';
+                $hiba = true;
+            }
+
+
+            if ((strlen($hozzaszolas) < 10) || (strlen($hozzaszolas) > 10000)) {
+                print '<div class="hibauzi" style="color: red">A hozzászólás legalább 10 és maximum 10000 karakter lehet!</div>';
+                $hiba = true;
+            }
+            if ($hiba == false) {
+
+                $message = "Új üzenet érkezett a gaboresku.hu weboldalról.\n\n";
+                $message .= "Név: $nev\n";
+                $message .= "mail: $mail\n";
+                $message .= "Fő: $vendeg\n";
+                $message .= "Hozzászólás: $hozzaszolas\n";
+//feladó      
+                $header = "From: gaboresku.hu  <info@gaboroesku.hu>";
+                $subject = "Új üzenet a gaboresku.hu-ról ($nev)";
+                $to = "gaboroka2019@gmail.com";
+
+                mail($to, $subject, $message, $header);
+                header('location: koszono.php');
+            } else {
+                print '<div class="hibauzi">Hiba</div>';
+            }
+        }
         ?>
         <div class="test">
             <div id="urlapContainer">
@@ -54,60 +105,13 @@
                     </select><br>
                     <label>Megjegyzés:</label><br>
                     <textarea rows="4" cols="30" name="hozzaszolas" placeholder="Valami:">
-                        <?php
-                        if (isset($_POST['hozzaszolas'])) {
-                            print $_POST['hozzaszolas'];
-                        }
-                        ?>
+                       
                     </textarea><br>
-                    <input class="belepes" type="submit" value="Küldés">
-                </form> 
+                    <input class="belepes" id="gomb" type="submit" value="Küldés">
+                </form>   
             </div> 
         </div>
-        <?php
-        if ((isset($_POST['nev'])) && (isset($_POST['mail'])) && (isset($_POST['vendeg'])) && (isset($_POST['hozzaszolas']))) {
 
-            $nev = trim($_POST['nev']);
-            $mail = trim($_POST['mail']);
-            $vendeg = trim($_POST['vendeg']);
-            $hozzaszolas = trim($_POST['hozzaszolas']);
-            $hiba = false;
-
-            if (preg_match("/^[a-zöüóőúűáé\s.]{5,50}$/i", $nev) == 0) {
-                print '<div style="color: red">Add meg a neved!</div>';
-                $hiba = true;
-            }
-
-
-            if (preg_match("/^[0-9a-z\.-]+@([0-9a-z-]+\.)+[a-z]{2,4}$/", $mail) == 0) {
-                print '<div style="color: red">Érvénytelen email cím!</div>';
-                $hiba = true;
-            }
-
-
-            if ((strlen($hozzaszolas) < 10) || (strlen($hozzaszolas) > 10000)) {
-                print '<div style="color: red">A hozzászólás legalább 10 és maximum 100 karakter lehet!</div>';
-                $hiba = true;
-            }
-            if ($hiba) {
-
-                $message = "Új üzenet érkezett a gaboresku.hu weboldalról.\n\n";
-                $message .= "Név: $nev\n";
-                $message .= "Név: $mail\n";
-                $message .= "Név: $vendeg\n";
-                $message .= "Email: $hozzaszolas\n";
-//feladó      
-                $header = "From: gaboresku.hu  <info@gaboroesku.hu>";
-                $subject = "Új üzenet agaboresku.hu-ról ($nev)";
-                $to = "gaboroka2019@gmail.com";
-
-                mail($to, $subject, $message, $header);
-             print 'Üzenet elküldve.';
-            }
-        }
-        ?>
-        <?php
-        ?>
 
         <div id="textContainer">
             <h1>Szeretettel várunk!</h1>
@@ -120,6 +124,6 @@
             </p>               
         </div>       
 
-<?php include 'includes/footer.php'; ?>
+        <?php include 'includes/footer.php'; ?>
 
 

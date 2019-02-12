@@ -12,11 +12,10 @@ body{
     background-size: cover;
 }
 #mainContainer{
-    text-align: center; 
+    text-align: center;
+    background-color: rgba(225, 225, 225, 0.3);
 }
-#header{
-    margin-top: 5px;
-}
+
 .cim{
     width: 40%;
     display: block;
@@ -99,21 +98,32 @@ p{
     margin-top: 5px;
     text-align: justify;
 }
+.hibauzi{
+    font-size: 20px;
+    padding-left: 10%;
+    color: red;
+}
+.hibas{
+    border: 1px solid red;
+}
 
-
-@media only screen and (max-width: 800px) {
+.vissza{
+    padding-top: 50px;
+    padding-left: 5%;
+}
+@media screen and (max-width: 830px) {
 
     .cim{
         width: 100%;
         display: block;
-        float: none;
+        float: left;
         background-color: yellowgreen;
     }
     .menuContainer{
         width: 100%;
-        display: inline;
-        float: none;
-        background-color: pink
+        display: block;
+        float: left;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     a{
         padding: 5px;
@@ -122,16 +132,12 @@ p{
     #urlapContainer{
         width: 100%;
         float: left;
+        display: block;
     }
-
-    #BelepContainer{
+    .test{
         width: 100%;
         float: left;
-    }
-
-    #textContainer{
-        width: 100%;
-        float: left;
+        display: block; 
     }
     #urlap{
         width: 100%;
@@ -139,6 +145,13 @@ p{
         padding-bottom: 0;
         margin: 0 auto 0 auto;
     }
+
+    #textContainer{
+        width: 100%;
+        float: left;
+        display: block;
+    }
+
     h1{
         text-align: center;
     }

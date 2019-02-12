@@ -14,9 +14,7 @@ body{
 #mainContainer{
     text-align: center;
 }
-#header{
-    margin-top: 5px;
-}
+
 .cim{
     width: 40%;
     display: block;
@@ -73,14 +71,14 @@ a:hover{
     .cim{
         width: 100%;
         display: block;
-        float: none;
+        float: left;
         background-color: yellowgreen;
     }
     .menuContainer{
         width: 100%;
-        display: inline;
-        float: none;
-        background-color: pink
+        display: block;
+        float: left;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     a{
         padding: 5px;
