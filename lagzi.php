@@ -6,16 +6,16 @@
         <title></title>
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript">
-        $(window).ready(function(){
-            $('#lagzi').css('text-decoration', 'underline');
-            
-        });
-        
+            $(window).ready(function () {
+                $('#lagzi').css('text-decoration', 'underline');
+
+            });
+
         </script>
     </head>
-    <body>
-        <?php include 'includes/menu.php'; ?>       
-        <div class="main_container">
+    <body>    
+        <div id="mainContainer">
+            <?php include 'includes/menu.php'; ?>
             <div class="cim_container">
                 <h1>Helyszín</h1>
                 <p>Dr. Török Béla Óvoda és Általános Iskola</p>

@@ -7,11 +7,11 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript">
-        $(window).ready(function(){
-            $('#fo').css('text-decoration', 'underline');
-            
-        });
-        
+            $(window).ready(function () {
+                $('#fo').css('text-decoration', 'underline');
+
+            });
+
         </script>
     </head>
     <body>
@@ -20,10 +20,10 @@
             <div class="test">              
                 <div class="BoroGabor">
                     <p>Szeretettel várunk GáBoró!</p>
-
                 </div>    
             </div>
         </div>
-        <?php include 'includes/footer.php'; ?>
+    </body>
+</html>
 
 

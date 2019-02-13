@@ -13,9 +13,9 @@
         
         </script>
     </head>
-    <body>
-        <?php include 'includes/menu.php'; ?>       
-        <div class="main_container">
+    <body>          
+        <div id="mainContainer">
+            <?php include 'includes/menu.php'; ?> 
             <div class="cim_container">
                 <h1>Helyszín</h1>
                 <p>Zuglói Páduai Szent Antal plébániatemplom</p>
