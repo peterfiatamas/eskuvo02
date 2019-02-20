@@ -9,7 +9,6 @@ $(document).ready(function () {
         }, 2500);
     } else {
         $(".BoroGabor").animate({
-            
             opacity: 0.8,
             marginLeft: "10%",
             marginTop: "20%",

@@ -3,7 +3,9 @@
     <head>
         <link type="text/css" href="visszajelzek.css" rel="stylesheet" />       
         <meta charset="UTF-8">
-        <title></title>        
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />        
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript" src="visszajelzes.js"></script>
@@ -17,7 +19,7 @@
     </head>
     <body>
         <div id="mainContainer">
-            <?php include 'includes/menu.php'; ?>
+            <?php include 'includes/menu.php'; ?><br>
             <?php
             ?>
             <?php
@@ -40,7 +42,7 @@
                 }
 
 
-                if ((strlen($hozzaszolas) < 10) || (strlen($hozzaszolas) > 10000)) {
+                if ((strlen($hozzaszolas) < 0) || (strlen($hozzaszolas) > 10000)) {
                     print '<div class="hibauzi" style="color: red">A hozzászólás legalább 10 és maximum 10000 karakter lehet!</div>';
                     $hiba = true;
                 }

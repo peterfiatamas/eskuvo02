@@ -3,7 +3,9 @@
     <head>
         <link type="text/css" href="lagzi.css" rel="stylesheet" />   
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script type="text/javascript">
             $(window).ready(function () {
@@ -21,9 +23,6 @@
                 <p>Dr. Török Béla Óvoda és Általános Iskola</p>
                 <p>1142 Budapest, Rákospatak u. 101.</p>
             </div>
-            <div class="terkep_container">
-                <iframe class="terkep" src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d43109.1102142897!2d19.0769944!3d47.5226446!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4741dba003f4f65f%3A0x41fcb8ac3633fd07!2sR%C3%A1kospatak+u.+101%2C+Budapest%2C+1142!3m2!1d47.5312367!2d19.1028402!5e0!3m2!1shu!2shu!4v1549620538594" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
-            </div>
             <div class="szoveg">
                 <p style="color: black"><b>Tömegközlekedéssel:</b> 74-es trolibusszal Pándorfalu utcai megálló, 5-ös busszal
                     és 69-es villamossal a Rákospatak utcai megálló és 5 perc séta a patak mentén.<br><b>Autóval:</b> 
@@ -37,6 +36,10 @@
                     Zene és tánc minden mennyiségben...</p>
                 </p>
             </div>
+            <div class="terkep_container">
+                <iframe class="terkep" src="https://www.google.com/maps/embed?pb=!1m19!1m8!1m3!1d43109.1102142897!2d19.0769944!3d47.5226446!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x4741dba003f4f65f%3A0x41fcb8ac3633fd07!2sR%C3%A1kospatak+u.+101%2C+Budapest%2C+1142!3m2!1d47.5312367!2d19.1028402!5e0!3m2!1shu!2shu!4v1549620538594" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe> 
+            </div>
+
             <div><br>
                 <div class="ugras_container">
                     <a class="ugras" target="_blank" href="https://www.google.com/maps/dir//R%C3%A1kospatak+u.+101,+Budapest,+1142/@47.5226446,19.0769944,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4741dba003f4f65f:0x41fcb8ac3633fd07!2m2!1d19.1028402!2d47.5312367">
