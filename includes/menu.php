@@ -7,6 +7,7 @@
             <a id="lagzi" href="lagzi.php">Lagzi</a>                
             <a id="visszajel" href="visszajelzek.php">Visszajelzek</a>   
             <a id="ajandek" href="ajandek.php">Ajándék</a>          
+            <a id="kivansag" href="kivansag.php">Zene kívánság</a>          
         </nav>
     </div>
 </div>

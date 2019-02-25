@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+body{
+    background-image: url("kepek/elso.jpg");
+    height: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#mainContainer{
+    text-align: center;
+    background-color: rgba(225, 225, 225, 0.3);
+}
+
+.cim{
+    width: 40%;
+    display: block;
+    float: left;
+    font-size: 25px;
+    color: white;
+    background-color: yellowgreen;
+}
+.menuContainer{
+    width: 60%;
+    display: block;
+    font-size: 20px;
+    float: left;
+    background: rgba(225, 225, 225, 0.3);
+}
+a{
+    text-decoration: none;
+    color: gray;
+    padding: 4px;
+    font-size: 25px;
+}
+a:hover{
+    text-decoration: underline;
+
+}
+.intro{
+    padding: 20px;
+}
+.urlap{
+    padding: 20px;
+}
+.belepes{
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: orange;
+    color: white;
+    box-shadow: 4px 4px 2px gray;
+}
+.belepes:hover{
+    background-color: #ffcc66;
+}
+.kiiratas{
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 830px) {
+
+    .cim{
+        width: 100%;
+        display: block;
+        float: left;
+        background-color: yellowgreen;
+    }
+    .menuContainer{
+        width: 100%;
+        display: block;
+        float: left;
+        background: rgba(225, 225, 225, 0.3);
+    }
+    a{
+        padding: 5px;
+        margin-top: 5px;
+    }
+    #urlapContainer{
+        width: 100%;
+        float: left;
+        display: block;
+    }
+    .test{
+        width: 100%;
+        float: left;
+        display: block; 
+    }
+    #urlap{
+        width: 100%;
+        text-align: center; 
+        padding-bottom: 0;
+        margin: 0 auto 0 auto;
+    }
+    .belepes{
+        margin-bottom: 10px;
+    }
+
+    #textContainer{
+        width: 100%;
+        float: left;
+        display: block;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+}
