@@ -43,12 +43,29 @@ a:hover{
 }
 .intro{
     padding: 20px;
+    padding-top: 50px;
+    color: grey
+}
+.hibajel{
+    color:red;
+    text-align: center
 }
 .urlap{
     padding: 20px;
 }
-.belepes{
+
+.bevitel{
     margin-top: 5px;
+    width: 200px;
+    height: 25px;
+}
+#szoveg{
+    margin-top: 5px;
+    width: 200px;
+    height: 80px;
+}
+.belepes{
+    margin-top: 10px;
     padding: 5px;
     border-radius: 5px;
     background-color: orange;

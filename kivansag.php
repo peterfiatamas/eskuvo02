@@ -22,11 +22,11 @@
                 <h1 class="intro">Ezen az űrlapon zenéket kérhetsz a lagzira!</h1>
                 <form class="urlap" action="kivansag.php" method="post" >
                     <label>Név:</label><br>
-                    <input type="text" name="nev" value="<?php if (isset($_POST["nev"])) {
+                    <input class="bevitel" type="text" name="nev" value="<?php if (isset($_POST["nev"])) {
                 print $_POST["nev"];
-            } ?>"><br>
+            } ?>"><br><br>
                     <label>Kívánság:</label><br>
-                    <textarea name="kivansag">
+                    <textarea id="szoveg" name="kivansag">
 <?php if (isset($_POST["kivansag"])) {
     print $_POST["kivansag"];
 } ?>
@@ -58,12 +58,12 @@
             $hibas = false;
 
             if (preg_match("/^[a-zöüóőúéáűíÖÜÓŐÚÉÁŰÍ\. -]{5,200}$/i", $nev) == 0) {
-                print "Add meg a neved!<br>";
+                print "<div class='hibajel'>Add meg a neved!</div><br>";
                 $hibas = true;
             }
             
             if(strlen($kivansag)<4){
-                print 'Kérj előadót vagy számot!';
+                print "<div class='hibajel'>Kérj előadót vagy számot!</div>";
                 $hibas=true;
             }
             //print "<div style='padding-left:10px;'>" . $nev . "<br>" . "Kívánsága: " . $kivansag . "</div>";
